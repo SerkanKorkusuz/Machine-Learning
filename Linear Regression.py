@@ -28,6 +28,34 @@ plot.scatter(att, label)
 plot.plot(att, predictLabel, c="r")
 plot.xlabel("Experience")
 plot.ylabel("Salary")
+plot.title("Thanks to scipy")
 plot.show()
+
+#another way to form a model
+
+from sklearn.linear_model import LinearRegression
+
+linear_reg_model = LinearRegression()
+
+attArr = myData.deneyim.values.reshape(-1,1)
+labelArr = myData.maas.values.reshape(-1,1)
+#print(attArr.shape())
+
+linear_reg_model.fit(attArr, labelArr)
+print("y=mx+n =>   n=" + str(linear_reg_model.predict([[0]])))
+print("y=mx+n =>   n=" + str(linear_reg_model.intercept_))
+print("y=mx+n =>   m=" + str(linear_reg_model.coef_))
+
+newAtt = np.linspace(0, 15, 15).reshape(-1,1)
+newLabel = linear_reg_model.predict(newAtt)
+plot.scatter(attArr, labelArr)
+plot.plot(newAtt, newLabel, c="r")
+plot.xlabel("Experience")
+plot.ylabel("Salary")
+plot.title("Thanks to skicit-learn")
+plot.show()
+
+
+
 
 
