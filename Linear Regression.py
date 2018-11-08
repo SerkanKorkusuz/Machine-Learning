@@ -4,7 +4,7 @@ import matplotlib.pyplot as plot
 from scipy import stats
 from sklearn.linear_model import LinearRegression
 
-source = ("C:\\Users\\casper\\Desktop\\Python\\Projects\\Machine Learning in Python\\linear-regression-dataset.csv")
+source = ("https://github.com/SerkanKorkusuz/Machine-Learning/blob/master/linear-regression-dataset.csv")
 myData = pd.read_csv(source, header=0, prefix="V", sep=";")
 print(myData)
 
