@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plot
 from scipy import stats
+from sklearn.linear_model import LinearRegression
 
 source = ("C:\\Users\\casper\\Desktop\\Python\\Projects\\Machine Learning in Python\\linear-regression-dataset.csv")
 myData = pd.read_csv(source, header=0, prefix="V", sep=";")
@@ -32,8 +33,6 @@ plot.title("Thanks to scipy")
 plot.show()
 
 #another way to form a model
-
-from sklearn.linear_model import LinearRegression
 
 linear_reg_model = LinearRegression()
 
