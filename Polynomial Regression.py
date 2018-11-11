@@ -19,6 +19,14 @@ labelArr = np.array(label)[0,:]
 
 polyRegress = np.poly1d(np.polyfit(attArr, labelArr, 4))
 
+attP = np.linspace(0, 7, 100)
+plot.scatter(attArr, labelArr)
+plot.plot(attP, polyRegress(attP), c="r")
+plot.show()
+
+r2 = r2_score(labelArr, polyRegress(attArr))
+print(r2)
+
 
 
 
