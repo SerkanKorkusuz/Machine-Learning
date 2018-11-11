@@ -14,4 +14,12 @@ print(label)
 plot.scatter(att, label)
 plot.show()
 
+attArr = np.array(att)[0,:]
+labelArr = np.array(label)[0,:]
+
+polyRegress = np.poly1d(np.polyfit(attArr, labelArr, 4))
+
+
+
+
 
