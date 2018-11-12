@@ -54,6 +54,12 @@ labelForNumpy = myData.araba_max_hiz.values
 
 polyRegress =np.poly1d(np.polyfit(attForNumpy, labelForNumpy, 4))
 
+plot.scatter(att,label)
+plot.plot(attX, polyRegress(attX))
+plot.xlabel("Price of Car")
+plot.ylabel("Velocity")
+plot.show()
 
+print(polyRegress(10000))
 
 
