@@ -48,4 +48,12 @@ plot.xlabel("Price of Car")
 plot.ylabel("Velocity")
 plot.show()
 
+#with numpy, I think it gives better result
+attForNumpy = myData.araba_fiyat.values
+labelForNumpy = myData.araba_max_hiz.values
+
+polyRegress =np.poly1d(np.polyfit(attForNumpy, labelForNumpy, 4))
+
+
+
 
