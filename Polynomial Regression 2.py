@@ -4,7 +4,7 @@ import matplotlib.pyplot as plot
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-source_url = ("C:\\Users\\casper\\Desktop\\Machine Learning\\Machine Learning in Python\\Udemy-DATAI\\Polynomial Regression\\polynomial-regression.csv")
+source_url = ("https://github.com/SerkanKorkusuz/Machine-Learning/blob/master/polynomial-regression.csv")
 myData = pd.read_csv(source_url, header = 0, prefix = "V", sep = ";")
 print(myData)
 
@@ -47,19 +47,5 @@ plot.plot(att, labelY)
 plot.xlabel("Price of Car")
 plot.ylabel("Velocity")
 plot.show()
-
-#with numpy, I think it gives better result
-attForNumpy = myData.araba_fiyat.values
-labelForNumpy = myData.araba_max_hiz.values
-
-polyRegress =np.poly1d(np.polyfit(attForNumpy, labelForNumpy, 4))
-
-plot.scatter(att,label)
-plot.plot(attX, polyRegress(attX))
-plot.xlabel("Price of Car")
-plot.ylabel("Velocity")
-plot.show()
-
-print(polyRegress(10000))
 
 
