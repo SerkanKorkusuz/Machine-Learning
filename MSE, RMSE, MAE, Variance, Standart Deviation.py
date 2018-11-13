@@ -18,7 +18,11 @@ for j in error:
 print("Squared Error: ", squared_error)
 print("Absolute Error: ", absolute_error)
 
+mean_squared_error = sum(squared_error) / len(squared_error)
+print("Mean Squared Error: ", mean_squared_error)
 
+mean_absolute_error = sum(absolute_error) / len(absolute_error)
+print("Mean Absolute Error: ", mean_absolute_error)
 
-
-
+root_mean_squared_error = sqrt(mean_squared_error)
+print("Root Mean Squared Error: ", root_mean_squared_error)
