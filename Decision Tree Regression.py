@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plot
 from sklearn.tree import DecisionTreeRegressor
 
-source_url = ("C:\\Users\\casper\\Desktop\\Machine Learning\\Machine Learning in Python\\Udemy-DATAI\\Decision Tree Regression\\decision-tree-regression-dataset.csv")
+source_url = ("https://github.com/SerkanKorkusuz/Machine-Learning/blob/master/decision-tree-regression-dataset.csv")
 myData = pd.read_csv(source_url, header = None, prefix = "V", sep = ";")
 print(myData)
 
