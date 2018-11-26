@@ -17,3 +17,14 @@ my_rf_model = RandomForestRegressor(n_estimators = 100, random_state = 42)
 #n_estimator determines the numbers of trees
 my_rf_model.fit(att, label)
 print(my_rf_model.predict([[7.8]]))
+
+attX = np.arange(min(att), max(att), 0.01).reshape(-1,1)
+labelY = my_rf_model.predict(attX)
+plot.scatter(att, label, c="r")
+plot.plot(attX, labelY)
+plot.xlabel("Tribune Sector")
+plot.ylabel("Ticket Price")
+plot.show()
+
+labelCompare = my_rf_model.predict(att)
+print("r2_score: ", r2_score(label, labelCompare))
