@@ -11,3 +11,11 @@ source_url = ("C:\\Users\\casper\\Desktop\\Machine Learning\\Machine Learning in
 myData = pd.read_csv(source_url, header = 0)
 myData.drop(["id", "Unnamed: 32"], axis = 1, inplace = True)
 #print(myData.head())
+
+M = myData[myData.diagnosis == "M"]
+B = myData[myData.diagnosis == "B"]
+#print(M.info())
+#print(B.info())
+
+
+#to be continued
