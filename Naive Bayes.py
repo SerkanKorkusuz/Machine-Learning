@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from pandas import DataFrame
 
-source_url = ("C:\\Users\\casper\\Desktop\\Machine Learning\\Machine Learning in Python\\Udemy-DATAI\\Naive Bayes\\data.csv")
+source_url = ("https://raw.githubusercontent.com/SerkanKorkusuz/Machine-Learning/master/naive-bayes-dataset.csv")
 myData = pd.read_csv(source_url, header = 0)
 myData.drop(["id", "Unnamed: 32"], axis = 1, inplace = True)
 #print(myData.head())
