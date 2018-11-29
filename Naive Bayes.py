@@ -24,5 +24,12 @@ plot.ylabel("area_mean")
 plot.legend()
 plot.show()
 
+plot.scatter(M.radius_mean, M.texture_mean, color = "red", label = "Malign", alpha = 0.4)
+plot.scatter(B.radius_mean, B.texture_mean, color  = "blue", label = "Benign")
+plot.xlabel("radius_mean")
+plot.ylabel("texture_mean")
+plot.legend()
+plot.show()
+
 
 #to be continued
