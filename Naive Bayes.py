@@ -17,5 +17,12 @@ B = myData[myData.diagnosis == "B"]
 #print(M.info())
 #print(B.info())
 
+plot.scatter(M.radius_mean, M.area_mean, color = "red", label = "Malign", alpha = 0.4)
+plot.scatter(B.radius_mean, B.area_mean, color  = "blue", label = "Benign")
+plot.xlabel("radius_mean")
+plot.ylabel("area_mean")
+plot.legend()
+plot.show()
+
 
 #to be continued
