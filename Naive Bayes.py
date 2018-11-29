@@ -31,5 +31,14 @@ plot.ylabel("texture_mean")
 plot.legend()
 plot.show()
 
+myData.diagnosis = [1 if each == "M" else 0 for each in myData.diagnosis]
+label = myData.diagnosis.values
+att = myData.drop(["diagnosis"], axis = 1)
 
-#to be continued
+att = (att - np.min(att)) / (np.max(att) - np.min(att))
+
+att_train, att_test, label_train, label_test = train_test_split(att, label, test_size = 0.3, random_state = 42)
+
+my_model = GaussianNB()
+my_model.fit(att_train, label_train)
+
