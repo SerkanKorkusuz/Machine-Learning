@@ -25,4 +25,10 @@ myData = pd.DataFrame(dictionary)
 #print(myData.info())
 #print(myData.describe())
 
+plot.scatter(att1, label1, c = "black")
+plot.scatter(att2, label2, c = "black")
+plot.scatter(att3, label3, c = "black")
+plot.show()
+
+
 #to be continued
