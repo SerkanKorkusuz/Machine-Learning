@@ -30,5 +30,10 @@ plot.scatter(att2, label2, c = "black")
 plot.scatter(att3, label3, c = "black")
 plot.show()
 
+wcss = []
+for i in range(1, 15):
+    my_model = KMeans(n_clusters = i)
+    my_model.fit(myData)
+    wcss.append(my_model.inertia_)
 
 #to be continued
