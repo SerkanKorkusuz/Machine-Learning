@@ -13,3 +13,6 @@ label2 = np.random.normal(60, 5, 1000)
 
 att3 = np.random.normal(55, 5, 1000)
 label3 = np.random.normal(15, 5, 1000)
+
+att = np.concatenate((att1, att2, att3), axis = 0)
+label = np.concatenate((label1, label2, label3), axis = 0)
