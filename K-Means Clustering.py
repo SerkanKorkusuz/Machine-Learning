@@ -52,6 +52,9 @@ plot.scatter(myData.att[myData.label_clustered == 0], myData.label[myData.label_
 plot.scatter(myData.att[myData.label_clustered == 1], myData.label[myData.label_clustered == 1], c = "green")
 plot.scatter(myData.att[myData.label_clustered == 2], myData.label[myData.label_clustered == 2], c = "blue")
 
-
+#plot.scatter(myData.att[myData.label_clustered == 3], myData.label[myData.label_clustered == 3], c = "orange")
+#plot.scatter(myData.att[myData.label_clustered == 4], myData.label[myData.label_clustered == 4], c = "black")
+plot.scatter(myModel.cluster_centers_[:, 0], myModel.cluster_centers_[:, 1], c = "yellow")
+plot.show()
 
 #to be continued
