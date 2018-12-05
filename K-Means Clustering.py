@@ -48,5 +48,10 @@ clusters = myModel.fit_predict(myData)
 myData["label_clustered"] = clusters
 print(myData)
 
+plot.scatter(myData.att[myData.label_clustered == 0], myData.label[myData.label_clustered == 0], c = "red") 
+plot.scatter(myData.att[myData.label_clustered == 1], myData.label[myData.label_clustered == 1], c = "green")
+plot.scatter(myData.att[myData.label_clustered == 2], myData.label[myData.label_clustered == 2], c = "blue")
+
+
 
 #to be continued
