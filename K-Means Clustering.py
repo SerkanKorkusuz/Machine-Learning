@@ -35,5 +35,10 @@ for i in range(1, 15):
     my_model = KMeans(n_clusters = i)
     my_model.fit(myData)
     wcss.append(my_model.inertia_)
+    
+plot.plot(range(1, 15), wcss)
+plot.xlabel("K cluster value")
+plot.ylabel("WCSS")
+plot.show()
 
 #to be continued
