@@ -41,4 +41,12 @@ plot.xlabel("K cluster value")
 plot.ylabel("WCSS")
 plot.show()
 
+myModel = KMeans(n_clusters = 3)
+clusters = myModel.fit_predict(myData)
+#print(clusters)
+
+myData["label_clustered"] = clusters
+print(myData)
+
+
 #to be continued
