@@ -11,4 +11,12 @@ myData = pd.read_csv(source_url, header = 0)
 myData.drop(["id", "Unnamed: 32"], axis = 1, inplace = True)
 #print(myData.head())
 
+M = myData[myData.diagnosis == "M"]
+B = myData[myData.diagnosis == "B"]
+#print(M.info())
+#print(B.info())
+
+plot.scatter(M.radius_mean, M.area_mean, color = "red", label = "bad", alpha = 0.4)
+plot.scatter(B.radius_mean, B.area_mean, color  = "blue", label = "good")
+
 #to be continued...
