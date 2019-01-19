@@ -30,5 +30,9 @@ plot.ylabel("texture_mean")
 plot.legend()
 plot.show()
 
+myData.diagnosis = [1 if each == "M" else 0 for each in myData.diagnosis]
+label = myData.diagnosis.values
+att = myData.drop(["diagnosis"], axis = 1)
+
 
 #to be continued...
