@@ -50,5 +50,9 @@ for each in range(1, 100):
     my_model2.fit(att_train, label_train)
     k_score_list.append(my_model2.score(att_test, label_test))
 
+max_k_score = max(k_score_list)
 
+for i in range(len(k_score_list)):
+    if max_k_score == k_score_list[i]:
+    
 #to be continued...
