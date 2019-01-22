@@ -58,5 +58,7 @@ for i in range(len(k_score_list)):
 print(k_score_list)
 print("The k value giving the best score is {}".format(max_k_value))
 
-    
-#to be continued...
+plot.plot(range(1,100), k_score_list)
+plot.xlabel("k values")
+plot.ylabel("k scores")
+plot.show()
