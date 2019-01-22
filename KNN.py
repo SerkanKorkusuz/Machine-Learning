@@ -44,5 +44,11 @@ label_predict = my_model.predict(att_test)
 #print(label_predict)
 print("{} KNN Score: {}".format(3, my_model.score(att_test, label_test)))
 
+k_score_list = []
+for each in range(1, 100):
+    my_model2 = KNeighborsClassifier(n_neighbors = each)
+    my_model2.fit(att_train, label_train)
+    k_score_list.append(my_model2.score(att_test, label_test))
+
 
 #to be continued...
