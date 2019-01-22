@@ -54,5 +54,9 @@ max_k_score = max(k_score_list)
 
 for i in range(len(k_score_list)):
     if max_k_score == k_score_list[i]:
+        max_k_value = i + 1
+print(k_score_list)
+print("The k value giving the best score is {}".format(max_k_value))
+
     
 #to be continued...
