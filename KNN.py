@@ -9,7 +9,7 @@ from sklearn.neighbors import KNeighborsClassifier
 source_url = ("https://raw.githubusercontent.com/SerkanKorkusuz/Machine-Learning/master/KNN-data.csv")
 myData = pd.read_csv(source_url, header = 0)
 myData.drop(["id", "Unnamed: 32"], axis = 1, inplace = True)
-#print(myData.head())
+print(myData.head())
 
 M = myData[myData.diagnosis == "M"]
 B = myData[myData.diagnosis == "B"]
