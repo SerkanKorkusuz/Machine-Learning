@@ -41,7 +41,7 @@ att_train, att_test, label_train, label_test = train_test_split(att, label, test
 my_model = KNeighborsClassifier(n_neighbors = 3)
 my_model.fit(att_train, label_train)
 label_predict = my_model.predict(att_test)
-#print(label_predict)
+print(label_predict)
 print("{} KNN Score: {}".format(3, my_model.score(att_test, label_test)))
 
 k_score_list = []
